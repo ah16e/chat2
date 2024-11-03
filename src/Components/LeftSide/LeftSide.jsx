@@ -6,6 +6,10 @@ import { arrayUnion, collection, doc, getDoc, getDocs, query, serverTimestamp, s
 import { db } from '../../config/firebase';
 import { AppContext } from '../../context/AppContext';
 import { toast } from 'react-toastify';
+import { logout } from '../../config/firebase'
+
+
+
 export default function LeftSide() {
 
   const navigate = useNavigate();
@@ -140,7 +144,7 @@ export default function LeftSide() {
             <div className="sub-menu">
               <p onClick={()=> navigate('/profile')}>Edit Profile</p>
               <hr />
-              <p>Logout</p>
+              <p onClick={()=> logout()}>Logout</p>
             </div>
           </div>
         </div>
