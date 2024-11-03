@@ -1,57 +1,119 @@
-.profile{
-    min-height: 100vh;
-    background: url(/wep-1.jpg) no-repeat;
-    background-size: cover;
+.profile {
     display: flex;
-    align-items: center;
     justify-content: center;
-}
-.profile-container{
-    background: white;
-    display: flex;
     align-items: center;
-    justify-content: space-between;
-    min-width: 700px;
-    border-radius: 10px;
-}
-.profile-pic{
-    max-width: 160px;
-    aspect-ratio: 1/1;
-    margin: 20px auto;
-    border-radius: 50%;
-}
-.profile form{
+    padding: 20px;
+  }
+  
+  .profile-container {
+    width: 100%;
+    max-width: 500px;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    padding: 40px;
-}
-.profile form h3{
-    font-weight: 500;
-}
-.profile label{
+    align-items: center;
+  }
+  
+  .profile-container h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .profile-container label {
+    cursor: pointer;
     display: flex;
     align-items: center;
-    gap: 10px;
-    color: gray;
-    cursor: pointer;
-}
-.profile label img{
-    width: 50px;
-    aspect-ratio: 1/1;
+    margin-bottom: 10px;
+  }
+  
+  .profile-container label img {
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
-}
-.profile input,textarea{
+    margin-right: 10px;
+  }
+  
+  .profile-container input[type="text"],
+  .profile-container textarea {
+    width: 100%;
     padding: 10px;
-    min-width: 300px;
-    border: 1px solid #c9c9c9;
-    outline-color: #077eff;
-}
-.profile form button{
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .profile-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
     border: none;
-    color: wheat;
-    background-color: #077eff;
-    padding: 8px;
+    border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-}
+  }
+  
+  .profile-container button:hover {
+    background-color: #0056b3;
+  }
+  
+  .profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-top: 20px;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .profile-container {
+      max-width: 100%;
+      padding: 15px;
+    }
+  
+    .profile-container label img {
+      width: 60px;
+      height: 60px;
+    }
+  
+    .profile-container h3 {
+      font-size: 20px;
+    }
+  
+    .profile-container button {
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .profile-container {
+      padding: 10px;
+    }
+  
+    .profile-container label {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .profile-container label img {
+      margin: 0 0 10px 0;
+    }
+  
+    .profile-container input[type="text"],
+    .profile-container textarea {
+      font-size: 14px;
+    }
+  
+    .profile-container h3 {
+      font-size: 18px;
+    }
+  
+    .profile-pic {
+      width: 100px;
+      height: 100px;
+    }
+  }
+  
